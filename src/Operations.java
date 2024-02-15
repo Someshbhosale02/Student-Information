@@ -34,8 +34,21 @@ public class Operations {
     }
 
     //return single student object based on id in the map
-    public static Student gStudent(int id){
+    public static Student getStudent(int id){
         return studentMap.get(id);
     }
+
+    //delete the student and return the delete message
+    public static String deleteStudent(int id) {
+        studentMap.remove(id);
+        return "Student Object Deleted Successfully";
+    }
+
+    //update the student and return the update message
+    public static String updateStudent(Student stud) {
+        studentMap.put(stud.getId(), stud);
+        return "Student Object Updated Successfully";
+    }
+
 
 }
